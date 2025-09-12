@@ -1,0 +1,20 @@
+const express = require('express');
+const router = express.Router();
+const { db } = require('../Firebase/firebase.js');
+
+router.get('/Patchnote', async (req, res) => {
+  try {
+    const doc = await db.collection('PulseForge').doc("Patchnote").get();
+
+    const result = {...doc.data()};
+    res.json(result);
+  } 
+  catch (error) 
+  {
+    console.error(error);
+    res.status(500).json({ error: 'Erreur serveur' });
+  }
+});
+
+
+module.exports = router;
