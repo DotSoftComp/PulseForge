@@ -1,2 +1,3 @@
-StoreAsset/Server/
-StoreAsset\Server\Firebase\pulse-software-firebase-adminsdk-fbsvc-ba356465af.json
+StoreAsset/Server/node_modules
+StoreAsset/Server/Firebase/pulse-software-firebase-adminsdk-fbsvc-ba356465af.json
+StoreAsset/Client/node_modules
