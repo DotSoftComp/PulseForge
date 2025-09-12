@@ -1,0 +1,7 @@
+{
+  "name": "StandardLit",
+  "color": [0.8, 0.8, 0.8],
+  "specular": 10.0,
+  "roughness": 0.1,
+  "albedo": "InterfaceEditor/icon/modelFile.png"
+}
