@@ -16,5 +16,15 @@ router.get('/pulse', async (req, res) => {
   }
 });
 
+router.post("/ConnectUser", (req, res) =>
+{
+  console.log("BODY:", req.body);
+  const mail = req.body["email"];
+  const pass = req.body["password"];
+
+  res.json("wWYQPNanuwcw0Xdo3xM6dDGcPz02");
+})
+
+
 
 module.exports = router;

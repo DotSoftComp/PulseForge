@@ -3,6 +3,7 @@ const app = express();
 
 const authentification = require("./authentification/authentification");
 const pulseForge = require("./PulseForge/PulseForge");
+const users = require("./Users/Users");
 
 const version = "v0.0.1";
 
@@ -16,6 +17,7 @@ app.get('/', (req, res) => {
 
 app.use("/auth", authentification);
 app.use("/PulseForge", pulseForge);
+app.use("/Users", users);
 
 // Lancer le serveur
 const PORT = process.env.PORT || 3000;
