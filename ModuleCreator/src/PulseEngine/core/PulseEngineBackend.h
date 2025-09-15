@@ -36,6 +36,7 @@ class GuidCollection;
 class PulseExecutable;
 class IGraphicsAPI;
 class InputSystem;
+class Account;
 
 /**
  * @brief PulseEngineBackend is the main class of the Pulse Engine.
@@ -102,6 +103,8 @@ public:
     PulseEngine::Vector3 GetCameraPosition();
     PulseEngine::Vector3 GetCameraRotation();
 
+    Account* GetAccountLoggedIn() {return account; }
+
 
     static IGraphicsAPI* graphicsAPI;
     CoroutineManager* coroutineManager = nullptr;
@@ -142,6 +145,8 @@ private:
     nlohmann::json_abi_v3_12_0::json engineConfig;
 
     PulseExecutable* discordLauncher = nullptr; 
+
+    Account* account;
 
 
     void ProcessInput(GLFWwindow* window);
